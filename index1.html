@@ -3,52 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YEOLE</title>
+  <title>YEOLE - Creative Space</title>
+  <meta name="description" content="YEOLE offers creative services including video editing, logo design, and web development.">
   <link rel="stylesheet" href="index1.css">
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-  <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-   />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
 
+
+
+  <!-- Add these style tags in your head section -->
+<style>
+  /* Enhanced Color Variations */
+  .hero {
+    background: linear-gradient(245.69deg, #070707 0%, #121212 50%, #1d1c1c 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.03) 0%, transparent 30%);
+  }
+
+  .work {
+    background: rgba(15,15,15,0.98);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .about-section {
+    background: linear-gradient(245.69deg, #0a0a0a 0%, #131313 50%, #1a1a1a 100%);
+    position: relative;
+  }
+
+  .about-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 70%, rgba(45,45,45,0.1) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .testimonials-container {
+    background: rgba(10,10,10,0.95);
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+</style>
 </head>
 <body>
     <header>
-        <a class="logo"><img src="images/logo.png" alt="Website Logo"></a>
+        <a href="#" class="logo"><img src="images/logo.png" alt="YEOLE Logo"></a>
+        
 
-        <ul class="nav-list">
-            <li><a href="#">HOME</a></li>
-            <li><a href="work.html">WORK</a></li>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="work.html">PACKAGES</a></li>
             <li><a href="#ServiceSection">SERVICES</a></li>
             <li><a href="#about-section">ABOUT</a></li>
             <li><a href="ContactUs.html">CONTACT</a></li>
-          </ul>
+        </ul>
 
-        <div class="bx bx-menu" id="menu-icon"> </div>
+        <div class="bx bx-menu" id="menu-icon"></div>
         <div class="blur-overlay" id="blur-overlay"></div>
     </header>
 
     <div class="icons">
-        <a href="https://www.instagram.com/yeole.in/"><i class="ri-instagram-line"></i></a>
-        <a href="#"><i class="ri-youtube-line"></i></a>
-        <a href="#"><i class="ri-mail-line"></i></a>
+        <a href="https://www.instagram.com/yeole.in/" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        <a href="https://youtube.com/yeole" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+        <a href="mailto:contact@yeole.in" aria-label="Email"><i class="ri-mail-line"></i></a>
     </div>
-    
-
-    
-
-  
 
   <!-- Hero Section (Home Page) -->
-  <section class="hero">
+  <section class="hero" id="home">
     <h1>
       <span class="outline creative">CREATIVE</span> <br>
       <span class="space">SPACE</span>
     </h1>
     <div class="subtext">
       <div class="work_animation">
-        <a href="work.html">
-          <img src="images/workpng.png" alt="Work Link">
+        <a href="work.html" aria-label="View our work">
+          <img src="images/workpng.png" alt="View our work">
         </a>
       </div>
     </div>
@@ -56,41 +102,40 @@
   
   <!-- Service Section -->
   <section class="work" id="ServiceSection">
-    <br><span class="space1">OUR</span></br>
-    <h1 class="space2" > SERVICES.</h1>
+    <div class="service-heading-wrapper">
+      <span class="space1">OUR</span>
+      <h1 class="space2">SERVICES.</h1>
+    </div>
     <div class="container">
-      <div class="box" onclick="redirectTo('videowork.html')">
+      <div class="box" onclick="redirectTo('videowork.html')" tabindex="0" role="button" aria-label="Video Editing Services">
         <span>VIDEO EDITING</span>
       </div>
-      <div class="box" onclick="redirectTo('logowork.html')">
+      <div class="box" onclick="redirectTo('logowork.html')" tabindex="0" role="button" aria-label="Logo Design Services">
         <span>LOGO DESIGNING</span>
       </div>
-      <div class="box" onclick="redirectTo('videowork.html')">
+      <div class="box" onclick="redirectTo('shortvideos.html')" tabindex="0" role="button" aria-label="Short Videos Services">
         <span>SHORT VIDEOS</span>
       </div>
-      <div class="box" onclick="redirectTo('videowork.html')">
+      <div class="box" onclick="redirectTo('webdevelopment.html')" tabindex="0" role="button" aria-label="Web Development Services">
         <span>WEB DEVELOPMENT</span>
       </div>
-      <div class="box" onclick="redirectTo('videowork.html')">
+      <div class="box" onclick="redirectTo('socialmedia.html')" tabindex="0" role="button" aria-label="Social Media Services">
         <span>SOCIAL MEDIA</span>
       </div>
-      <div class="box" onclick="redirectTo('videowork.html')">
+      <div class="box" onclick="redirectTo('consultation.html')" tabindex="0" role="button" aria-label="Consultation Services">
         <span>CONSULTATION</span>
       </div>
     </div>
   </section>
 
  <!-- About Section -->
-
  <section class="about-section" id="about-section">
-  <!-- About Us Header and Info -->
   <div class="about-header">
     <span class="space1">ABOUT</span>
-    <h1 class="space2" > us.</h1>
+    <h1 class="space2">us.</h1>
     <p>We are a passionate team of creatives and developers dedicated to bringing your ideas to life. From stunning video edits to seamless web development, we craft solutions that inspire and deliver results.</p>
   </div>
 
-  <!-- Stats Section -->
   <div class="stats-container">
     <div class="stat">
       <span class="stat-number" data-target="100">0</span>
@@ -106,27 +151,92 @@
     </div>
   </div>
 
-  <!-- Testimonials Section -->
   <div class="testimonials-container">
     <h2>What Our Clients Say</h2>
     <div class="testimonials">
       <div class="testimonial">
         <p>"The team transformed my vision into a stunning website. Their attention to detail and professionalism is unmatched!"</p>
-        <span class="client-name">- John Doe</span>
+        <span class="client-name">- John Doe, Tech Startup CEO</span>
       </div>
       <div class="testimonial">
         <p>"Amazing video editing services! They delivered exactly what I wanted, and on time. Highly recommend!"</p>
-        <span class="client-name">- Jane Smith</span>
+        <span class="client-name">- Jane Smith, Marketing Director</span>
       </div>
+      <div class="testimonial">
+        <p>"Our social media engagement tripled after working with YEOLE. Their creative strategy made all the difference!"</p>
+        <span class="client-name">- Michael Brown, Small Business Owner</span>
+      </div>
+      <div class="testimonial">
+        <p>"The logo design perfectly captured our brand identity. We've received countless compliments since the rebrand."</p>
+        <span class="client-name">- Sarah Johnson, Creative Director</span>
+      </div>
+      <div class="testimonial">
+        <p>"From consultation to final delivery, the experience was seamless. Will definitely be using their services again."</p>
+        <span class="client-name">- David Wilson, E-commerce Entrepreneur</span>
+      </div>
+      <div class="testimonial">
+        <p>"The web development team exceeded our expectations. Our site loads faster and converts better than ever before."</p>
+        <span class="client-name">- Emily Chen, Digital Agency Owner</span>
+      </div>
+      <div class="testimonial">
+        <p>"Their video production quality is Hollywood-level. We've used their services for three campaigns and each one was perfect."</p>
+        <span class="client-name">- Robert Taylor, Film Producer</span>
     </div>
-  </div>
+</div>
 </section>
 
+<section class="footer-info">
+  <footer>
+    <div class="footer-container">
+      <!-- Logo and Social Icons -->
+      <div class="footer-logo-section">
+        <img src="images/logo.png" alt="YEOLE Logo" class="footer-logo">
+        <div class="social-icons">
+          <a href="https://www.instagram.com/yeole.in/" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="https://youtube.com/yeole" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+          <a href="mailto:contact@yeole.in" aria-label="Email"><i class="ri-mail-line"></i></a>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><i class="ri-map-pin-line"></i> Pune, Maharashtra, India</li>
+          <li><i class="ri-mail-line"></i> contact@yeole.in</li>
+          <li><i class="ri-phone-line"></i> +91 1234567890</li>
+        </ul>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="footer-nav">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="work.html">Packages</a></li>
+          <li><a href="#ServiceSection">Services</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="ContactUs.html">Contact</a></li>
+        </ul>
+      </div>
+
+  
+  </footer>
+</section>
+<footer>
+  <div class="footer-bottom">
+    <p>Copyright © 2025 All rights reserved | YEOLE</p>
+  </div>
+</footer>
 
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('header');
+    const navList = document.querySelector('#nav-list');
+    const menuIcon = document.getElementById('menu-icon');
+    const blurOverlay = document.getElementById('blur-overlay');
     let lastScrollTop = 0;
 
     // Hide/show header on scroll
@@ -146,96 +256,129 @@
 
     // Show header when mouse is near the top of the page
     window.addEventListener('mousemove', function (event) {
-        if (event.clientY <= 50) { // Adjust the value (50px) as needed
+        if (event.clientY <= 50) {
             header.classList.remove('hidden');
         }
     });
+
+  // Mobile menu toggle
+menuIcon.addEventListener('click', function () {
+  navList.classList.toggle('active');
+  blurOverlay.classList.toggle('active');
+  
+  // Toggle between menu and close icon
+  if (navList.classList.contains('active')) {
+      menuIcon.classList.remove('bx-menu');
+      menuIcon.classList.add('bx-x');
+  } else {
+      menuIcon.classList.add('bx-menu');
+      menuIcon.classList.remove('bx-x');
+  }
 });
 
-
-    function redirectTo(page) {
-      window.location.href = page;
-    }
-
-    window.onload = function() {
-      const ServiceSection = document.getElementById('ServiceSection');
-      const container = document.querySelector('.container');
-      
-      setTimeout(() => {
-        ServiceSection.classList.add('visible'); 
-        container.classList.add('visible');  
-      }, 500);
-    };
-
-    document.querySelector('.nav-links li a[href="#ServiceSection"]').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.getElementById('ServiceSection').scrollIntoView({ behavior: 'smooth' });
-    });
-
-
-    //menu icon js
-    document.addEventListener('DOMContentLoaded', function () {
-    const menuIcon = document.getElementById('menu-icon');
-    const navList = document.getElementById('nav-list');
-    const blurOverlay = document.getElementById('blur-overlay');
-
-    
-    menuIcon.addEventListener('click', function () {
-        navList.classList.toggle('active');
-        blurOverlay.classList.toggle('active');
-    });
-
-    
-    blurOverlay.addEventListener('click', function () {
-        navList.classList.remove('active');
-        blurOverlay.classList.remove('active');
-    });
+// Close mobile menu when clicking overlay
+blurOverlay.addEventListener('click', function () {
+  navList.classList.remove('active');
+  blurOverlay.classList.remove('active');
+  menuIcon.classList.add('bx-menu');
+  menuIcon.classList.remove('bx-x');
 });
-  </script>
 
-  <script>
-    // Animate Stats
-const stats = document.querySelectorAll('.stat-number');
-
-const animateStats = () => {
-  stats.forEach((stat) => {
-    const target = +stat.getAttribute('data-target');
-    const increment = target / 100; // Adjust speed here
-    let count = 0;
-
-    const updateNumber = () => {
-      if (count < target) {
-        count += increment;
-        stat.textContent = Math.ceil(count);
-        setTimeout(updateNumber, 20); // Adjust speed here
-      } else {
-        stat.textContent = `+${target}`;
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-list a').forEach(link => {
+  link.addEventListener('click', function() {
+      if (window.innerWidth <= 768) {
+          navList.classList.remove('active');
+          blurOverlay.classList.remove('active');
+          menuIcon.classList.add('bx-menu');
+          menuIcon.classList.remove('bx-x');
       }
-    };
-
-    updateNumber();
   });
-};
+});
 
-// Trigger animation when the stats section is in view
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animateStats();
-        observer.disconnect();
-      }
+    // Service section animation on load
+    const serviceSection = document.getElementById('ServiceSection');
+    const container = document.querySelector('.container');
+    
+    setTimeout(() => {
+      serviceSection.classList.add('visible'); 
+      container.classList.add('visible');  
+    }, 500);
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
     });
-  },
-  { threshold: 0.5 }
-);
 
-observer.observe(document.querySelector('.stats-container'));
+    // Animate Stats
+    const stats = document.querySelectorAll('.stat-number');
+
+    const animateStats = () => {
+      stats.forEach((stat) => {
+        const target = +stat.getAttribute('data-target');
+        const increment = target / 100;
+        let count = 0;
+
+        const updateNumber = () => {
+          if (count < target) {
+            count += increment;
+            stat.textContent = Math.ceil(count);
+            setTimeout(updateNumber, 20);
+          } else {
+            stat.textContent = `+${target}`;
+          }
+        };
+
+        updateNumber();
+      });
+    };
+
+    // Trigger animation when the stats section is in view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateStats();
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(document.querySelector('.stats-container'));
+  });
+
+  function redirectTo(page) {
+    window.location.href = page;
+  }
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const sectionId = sessionStorage.getItem('scrollTo');
+    if (sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            setTimeout(() => {
+                section.scrollIntoView({ behavior: 'smooth' });
+                sessionStorage.removeItem('scrollTo');
+            }, 500);
+        }
+    }
+});
+
+
+  
+</script>
+<script>
+  // Debug script to check visibility
+  console.log("Icons element:", document.querySelector('.icons'));
+  console.log("Computed display:", window.getComputedStyle(document.querySelector('.icons')).display);
   </script>
-
-<footer>
-  <p>Copyright © 2025 All rights reserved | YEOLE</p>
-</footer>
-
 </body>
 </html>

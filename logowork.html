@@ -3,17 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Product Slider | coding.pixel</title>
+    <title>Logo Design Work | YEOLE</title>
     <link rel="stylesheet" href="logowork.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
+    <style>
+        /* Header Styles - EXACTLY from main page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Anton', sans-serif;
+            color: white;
+            background: linear-gradient(245.69deg, #070707 10%, #121212 28.53%, #1d1c1c 75.52%);
+            padding-top: 100px; /* Add space for fixed header */
+        }
+        
+       /* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 33px 9%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+        header.hidden {
+            transform: translateY(-100%);
+        }
+        .logo img {
+            width: 150px;
+            height: auto;
+            position: relative;
+            top: 0px;
+            left: -100px;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+          }
+        
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-list a {
+            color: white;
+            margin-left: 60px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.55s ease;
+        }
+        
+        .nav-list a:hover {
+            background-color: white;
+            padding: 3px 6px;
+            border-radius: 50px;
+            color: black;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            transform: scale(1.4);
+        }
+        
+        #menu-icon {
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+            z-index: 10001;
+            display: none;
+        }
+        
+        .blur-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 5%;
+            }
+            
+            #menu-icon {
+                display: block;
+            }
+            
+            .nav-list {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 250px;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.9);
+                flex-direction: column;
+                padding: 100px 30px;
+                transition: all 0.5s ease;
+            }
+            
+            .nav-list.active {
+                right: 0;
+            }
+            
+            .nav-list a {
+                margin: 15px 0;
+            }
+        
+        }
+        @media (max-width: 1200px) {
+            .logo img {
+                left: -50px; /* Adjust left position for large tablets */
+            }
+        }
+    
+        @media (max-width: 992px) {
+            .logo img {
+                left: -30px; /* Further adjustment for smaller tablets */
+                width: 130px; /* Slightly reduce logo size */
+            }
+        }
+    
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 5%;
+            }
+            
+            .logo img {
+                left: 0; /* Reset left position for mobile */
+                width: 120px; /* Make logo slightly smaller */
+                position: static; /* Remove relative positioning */
+                margin-right: auto; /* Push menu icon to the right */
+            }
+            
+            #menu-icon {
+                display: block;
+            }
+            
+            .nav-list {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 250px;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.9);
+                flex-direction: column;
+                padding: 100px 30px;
+                transition: all 0.5s ease;
+            }
+            
+            .nav-list.active {
+                right: 0;
+            }
+            
+            .nav-list a {
+                margin: 15px 0;
+            }
+        }
+    
+        @media (max-width: 576px) {
+            .logo img {
+                width: 100px; /* Even smaller logo for very small screens */
+            }
+        }
+
+        
+    </style>
 </head>
 <body>
-    
-<header>
+    <!-- Header EXACTLY as in main page -->
+    <header>
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="YEOLE Logo"></a>
+        
+        <ul class="nav-list" id="nav-list">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="work.html">PACKAGES</a></li>
+            <li><a href="index.html#ServiceSection">SERVICES</a></li>
+            <li><a href="index.html#about-section">ABOUT</a></li>
+            <li><a href="ContactUs.html">CONTACT</a></li>
+        </ul>
 
-    <div class="logo">Logo Design Work:</div>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <div class="blur-overlay" id="blur-overlay"></div>
+    </header>
 
-</header>
+    <!-- Original Content with adjusted spacing -->
+    <div class="logo1">Logo Design Work:</div>
+
     <div class="carousel">
+        <!-- Your existing carousel content remains unchanged -->
         <div class="list">
             <div class="item">
                 <img src="images/Logo/logo2.jpg">
@@ -25,7 +216,6 @@
                         Company : Advertising Agency
                     </div>
                 </div>
-               
             </div>
 
             <div class="item">
@@ -38,7 +228,6 @@
                         Company : A Holiday Resort
                     </div>
                 </div>
-               
             </div>
 
             <div class="item">
@@ -51,7 +240,6 @@
                         Company : Marketing Agency
                     </div>
                 </div>
-                
             </div>
 
             <div class="item">
@@ -64,7 +252,6 @@
                         Company : Fashion
                     </div>
                 </div>
-              
             </div>
 
             <div class="item">
@@ -77,7 +264,6 @@
                         Company : Investment Organisation
                     </div>
                 </div>
-                
             </div>
 
             <div class="item">
@@ -90,7 +276,6 @@
                         Company : Growth Fund
                     </div>
                 </div>
-                
             </div>
         </div>
         <div class="arrows">
@@ -99,9 +284,107 @@
         </div>
     </div>
 
+    <section class="footer-info">
+        <footer>
+          <div class="footer-container">
+            <!-- Logo and Social Icons -->
+            <div class="footer-logo-section">
+              <img src="images/logo.png" alt="YEOLE Logo" class="footer-logo">
+              <div class="social-icons">
+                <a href="https://www.instagram.com/yeole.in/" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                <a href="https://youtube.com/yeole" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                <a href="mailto:contact@yeole.in" aria-label="Email"><i class="ri-mail-line"></i></a>
+              </div>
+            </div>
+      
+            <!-- Contact Information -->
+            <div class="footer-contact">
+              <h3>Contact Us</h3>
+              <ul>
+                <li><i class="ri-map-pin-line"></i> Pune, Maharashtra, India</li>
+                <li><i class="ri-mail-line"></i> contact@yeole.in</li>
+                <li><i class="ri-phone-line"></i> +91 1234567890</li>
+              </ul>
+            </div>
+      
+            <!-- Navigation Links -->
+            <div class="footer-nav">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="work.html">Packages</a></li>
+                <li><a href="#ServiceSection">Services</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+              </ul>
+            </div>
+      
+        
+        </footer>
+      </section>
+      <footer>
+        <div class="footer-bottom">
+          <p>Copyright © 2025 All rights reserved | YEOLE</p>
+        </div>
+      </footer>
 
+    <script>
+        // Header functionality EXACTLY as in main page
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.querySelector('header');
+            const navList = document.querySelector('#nav-list');
+            const menuIcon = document.getElementById('menu-icon');
+            const blurOverlay = document.getElementById('blur-overlay');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', function () {
+                let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                if (currentScroll > lastScrollTop) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            });
+
+            menuIcon.addEventListener('click', function () {
+                navList.classList.toggle('active');
+                blurOverlay.classList.toggle('active');
+                if (navList.classList.contains('active')) {
+                    menuIcon.classList.remove('bx-menu');
+                    menuIcon.classList.add('bx-x');
+                } else {
+                    menuIcon.classList.add('bx-menu');
+                    menuIcon.classList.remove('bx-x');
+                }
+            });
+
+            blurOverlay.addEventListener('click', function () {
+                navList.classList.remove('active');
+                blurOverlay.classList.remove('active');
+                menuIcon.classList.add('bx-menu');
+                menuIcon.classList.remove('bx-x');
+            });
+
+            document.querySelectorAll('.nav-list a').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        navList.classList.remove('active');
+                        blurOverlay.classList.remove('active');
+                        menuIcon.classList.add('bx-menu');
+                        menuIcon.classList.remove('bx-x');
+                    }
+                });
+            });
+        });
+
+        
+    </script>
 
     <script src="app.js"></script>
-    
 </body>
 </html>
+
+
+
+

@@ -33,9 +33,9 @@ body{
     --item5-opacity: 0;
 }
 
-.logo {
+.logo1 {
     position: absolute;
-    top: 80px;                
+    top: 110px;                
     left: 180px; 
     font-size: 24px;
     color: rgb(255, 255, 255);
@@ -60,18 +60,7 @@ body{
    
 }
 
-header{
-    width: 1040px;
-    max-width: 90%;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    height: 100px;
-    font-size: 2em;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    font-weight: medium;
-}
+
 
 
 /* carousel */
@@ -447,3 +436,211 @@ header{
     }
     
 }
+.footer-logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center logo and social icons */
+    text-align: center;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+
+
+
+  /* Footer Styles */
+.footer-info {
+    background: linear-gradient(245.69deg, #0a0a0a 0%, #131313 50%, #1a1a1a 100%);
+    color: #fff;
+    padding: 60px 0 0;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .footer-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 30%);
+    pointer-events: none;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Footer Logo Section */
+  .footer-logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1); /* Makes logo white */
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 24px;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+  }
+  
+  /* Footer Contact */
+  .footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    color: #fff;
+  }
+  
+  .footer-contact h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .footer-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-contact li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+  }
+  
+  .footer-contact i {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Footer Navigation */
+  .footer-nav h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    color: #fff;
+  }
+  
+  .footer-nav h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-nav li {
+    margin-bottom: 12px;
+  }
+  
+  .footer-nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 15px;
+  }
+  
+  .footer-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: width 0.3s ease;
+  }
+  
+  .footer-nav a:hover {
+    color: #fff;
+  }
+  
+  .footer-nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(10, 10, 10, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    
+    .footer-logo-section {
+      align-items: center;
+      text-align: center;
+    }
+    
+    .social-icons {
+      justify-content: center;
+    }
+    
+    .footer-contact, 
+    .footer-nav {
+      text-align: center;
+    }
+    
+    .footer-contact h3::after,
+    .footer-nav h3::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .footer-contact li {
+      justify-content: center;
+    }
+  }
